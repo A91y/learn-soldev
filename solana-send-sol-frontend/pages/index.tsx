@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 import { AppBar } from "../components/AppBar";
+import { BalanceDisplay } from '../components/BalanceDisplay'
 import { SendSolForm } from "../components/SendSolForm";
 import Head from "next/head";
 import WalletContextProvider from "../components/WalletContextProvider";
@@ -15,7 +16,7 @@ const Home: NextPage = (props) => {
       <WalletContextProvider>
         <AppBar />
         <div className={styles.AppBody}>
-          <p>Display Balance Here</p>
+          <BalanceDisplay />
           <SendSolForm />
         </div>
       </WalletContextProvider>
